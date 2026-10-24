@@ -1,0 +1,8 @@
+<View>
+  <Header value="$title"/>
+  <Text name="text" value="$text"/>
+  <Choices name="label" toName="text" choice="single" showInline="true">
+    <Choice value="nonideal"/>
+    <Choice value="other"/>
+  </Choices>
+</View>

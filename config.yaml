@@ -1,0 +1,45 @@
+project:
+  seed: 42
+  # ru, kk или оба: [kk, ru].
+  languages: [ru]
+
+paths:
+  raw: data/raw
+  clean: data/clean
+  external: data/external
+  annotated: data/annotated
+  corpus: data/corpus.jsonl
+  results: results
+  reports: reports
+
+pr1:
+  min_words: 50000
+  eval_regex_lines: 100
+  eval_sentences: 200
+
+wiki:
+  lang: ru
+  seed_title: Венгрия
+  target_words: 60000   # с запасом, часть уйдёт при очистке
+  min_article_words: 300
+  pause_sec: 0.2
+
+wiki_kk:
+  seed_title: Мажарстан
+  target_words: 25000
+  min_article_words: 100
+
+pr2:
+  vocab_size: {ru: 8000, kk: 2000}
+  n_typos: 200
+  n_lemma_words: 300
+
+pr4:
+  ngram_orders: [1, 2, 3]
+  smoothing_k: 0.1
+  train_frac: 0.8
+  dev_frac: 0.1
+  test_frac: 0.1
+  ud:
+    ru: "https://raw.githubusercontent.com/UniversalDependencies/UD_Russian-GSD/master/ru_gsd-ud-test.conllu"
+    kk: "https://raw.githubusercontent.com/UniversalDependencies/UD_Kazakh-KTB/master/kk_ktb-ud-test.conllu"

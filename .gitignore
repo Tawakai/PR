@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.idea/
+.DS_Store
+data/raw/
+data/external/
+data/clean/
+results/
+*.docx
